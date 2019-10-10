@@ -40,13 +40,13 @@ export function getAppointmentsForDay(state, day) {
     if(!interview){
       return null
     }
-    else{
-      const output = interview;
+    else {
+      const output = {...interview};
       const interviewerObj = state.interviewers[interview.interviewer];
       output.interviewer=interviewerObj
       return output;
     }
-    }
+  }
   
 
 

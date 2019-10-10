@@ -12,6 +12,7 @@
     "react-test-renderer": "^16.10.1"
   },
   "scripts": {
+    "cypress": "cypress open -P .",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -42,11 +43,16 @@
     "@testing-library/react": "^8.0.7",
     "@testing-library/react-hooks": "^2.0.1",
     "babel-loader": "^8.0.5",
-    "node-sass": "^4.11.0"
+    "node-sass": "^4.11.0",
+    "prop-types": "^15.7.2"
   },
   "jest": {
     "watchPathIgnorePatterns": [
       "<rootDir>/node_modules/"
+    ],
+    "collectCoverageFrom": [
+      "src/**/*.js",
+      "!src/index.js"
     ]
   },
   "proxy": "http://localhost:8001"
