@@ -1,4 +1,4 @@
-import React, { useState,useEffect, useReducer } from 'react';
+import React, { useState, useEffect, useReducer } from 'react';
 import axios from 'axios';
 import reducer, {
   SET_DAY,
@@ -61,21 +61,14 @@ export default function useApplicationData() {
           { type:SET_INTERVIEW,
             appointments
           }
-        //   prevState => ({
-        //   ...prevState,
-        //   appointments
-        // })
+
         );
         if(!isEdit) {
           addSpots(-1);
         }
-
-      // dispatch(
-      //   {type:SET_DAYS,days:days}
-      // )
       }
     ) ;
-}
+  }
   const cancelInterview = function(id) {
     const cancleAppointment ={
       ...state.appointments[id],
@@ -92,11 +85,6 @@ export default function useApplicationData() {
             { type:SET_INTERVIEW,
               appointments
             }
-
-          //   prevState => ({
-          //   ...prevState,
-          //   appointments
-          // })
           );
           addSpots(1);
         }
